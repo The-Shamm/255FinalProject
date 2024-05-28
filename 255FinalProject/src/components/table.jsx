@@ -6,17 +6,12 @@ import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import Paper from '@mui/material/Paper';
-
+import '../styles/Styles-table-01.css';
 export default function ServiceTeamTable({ data }) {
   return (
-    <TableContainer component={Paper} style={{
-      marginTop: '2%', 
-      marginBottom: '10%', 
-      backgroundColor: 'lightblue', 
-      maxWidth: "80%",
-      display: "block", // Change to "flex" once style issue is debugged
-      margin: "0 auto", // delete after debugging
-    }  }>
+    <TableContainer component={Paper} className="TableContainer">
+    
+
       <Table>
         <TableHead>
           <TableRow>

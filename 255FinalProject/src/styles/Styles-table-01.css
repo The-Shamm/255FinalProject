@@ -1,0 +1,10 @@
+/* Styles-table-01.css */
+.TableContainer {
+    margin-top: 2%;
+    margin-bottom: 10%;
+    background-color: rgb(173, 36, 36);
+    max-width: 80%;
+    display: block; /* Change to "flex" once style issue is debugged */
+    margin: 0 auto; /* delete after debugging */
+  }
+  
