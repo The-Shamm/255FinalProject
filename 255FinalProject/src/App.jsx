@@ -1,35 +1,50 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ServiceTeamTable from './components/table'
+import InputForm from './components/InputForm'
+import Image from './components/profileImage'
+//import Profile from './components/Profile'
+//import VariantButtonGroup from './components/buttonGroup'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState([]);
+
+  const handleSubmit = (formDataItem) => {
+    setFormData(prevData => [...prevData, formDataItem]);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+    <div><h3><Image></Image></h3></div>
+<div>
+<h1>***Creator  notes for future feature releases***</h1>
+<p>Here are some examples of links to other pages</p>
+<ul><p></p></ul>
+<nav>
+  <ul>
+    <li>
+      <a href="./profile">Profile page test</a><br></br>
+      <a href="profile">Phonebook page</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+      {/*<VariantButtonGroup buttonOne="Worker 1" buttonTwo="Worker 2" buttonThree="Worker 3" />*/}
+           <InputForm onSubmit={handleSubmit} />
+      <ServiceTeamTable data={formData} />
+   
+
+
+ </div>
+)
+
+
+
 }
+
+
 
 export default App
