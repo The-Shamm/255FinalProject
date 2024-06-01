@@ -10,9 +10,10 @@ import {
   Container,
   Typography,
   Paper,
-  Button
+  Button,
+  Stack,
 } from "@mui/material";
-
+import Navbar from "./components/Navbar";
 
 const serviceList = ["Service 1", "Service 2", "Service 3"];
 
@@ -25,14 +26,15 @@ function App() {
 
   return (
     <Container>
-      <div>        
-        <Sidebar />
-        <Feed />
-        <Rightbar/>
-
-        </div>
-
-     
+      <Box>
+        <Navbar/>
+        <Stack direction="row" spacing={2} justifyContent="space-between">
+         
+          <Sidebar />
+          <Feed />
+          <Rightbar />
+        </Stack>
+      </Box>
       <Typography
         variant="h1"
         sx={{ my: 4, textAlign: "center", color: "primary.main" }}
