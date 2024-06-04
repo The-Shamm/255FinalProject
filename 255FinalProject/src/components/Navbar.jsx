@@ -25,7 +25,19 @@ const Search = styled("div")(({ theme }) => ({
   width: "40%", // Ensure width value is a string
 }));
 
-const Icons = styled(Box)(({ theme }) => ({display:"flex"}));
+const Icons = styled(Box)(({ theme }) => ({
+  display: "none",
+  gap: 20,
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]:{display: "flex"}
+}));
+
+const UserBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: 10,
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]:{display: "none"}
+}));
 
 const Navbar = () => {
   return (
@@ -54,8 +66,20 @@ const Navbar = () => {
           <Badge badgeContent={4} color="secondary">
             <SettingsIcon color="action" />
           </Badge>
-          <Avatar sx={{width: 25, ml: 2, height: 30, width: 30}} src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+          <Avatar
+            sx={{ height: 30, width: 30 }}
+            src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
         </Icons>
+        <UserBox
+
+        >
+          <Avatar
+            sx={{ height: 30, width: 30 }}
+            src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+          <Typography variant="span">Sean</Typography>
+        </UserBox>
       </StyledToolbar>
     </AppBar>
   );
