@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Badge,
   Box,
   InputBase,
@@ -10,7 +11,7 @@ import {
 import React from "react";
 import Menu from "@mui/icons-material/Menu";
 import MailIcon from "@mui/icons-material/Mail";
-import SettingsIcon from "@mui/icons-material/Settings"; 
+import SettingsIcon from "@mui/icons-material/Settings";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -24,7 +25,7 @@ const Search = styled("div")(({ theme }) => ({
   width: "40%", // Ensure width value is a string
 }));
 
-const Icons = styled(Box)(({ theme }) => ({}));
+const Icons = styled(Box)(({ theme }) => ({display:"flex"}));
 
 const Navbar = () => {
   return (
@@ -53,6 +54,7 @@ const Navbar = () => {
           <Badge badgeContent={4} color="secondary">
             <SettingsIcon color="action" />
           </Badge>
+          <Avatar sx={{width: 25, ml: 2, height: 30, width: 30}} src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         </Icons>
       </StyledToolbar>
     </AppBar>
