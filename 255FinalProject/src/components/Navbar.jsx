@@ -18,18 +18,23 @@ import SettingsIcon from "@mui/icons-material/Settings";
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
+  alignItems: "center",
+  padding: "0 10px",
 });
 
 const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
-  padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
+  maxWidth: "500px", 
+  [theme.breakpoints.up("sm")]: {
+    width: "40%", 
+  },
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
-  gap: 20,
+  gap: 0,
   alignItems: "center",
   [theme.breakpoints.up("sm")]: { display: "flex" },
 }));
