@@ -4,12 +4,15 @@ import {
   Badge,
   Box,
   InputBase,
+  Menu,
+  MenuItem,
+  MenuList,
   Toolbar,
   Typography,
   styled,
-} from "@mui/material";
+} from '@mui/material';
 import React from "react";
-import Menu from "@mui/icons-material/Menu";
+
 import MailIcon from "@mui/icons-material/Mail";
 import SettingsIcon from "@mui/icons-material/Settings";
 
@@ -29,14 +32,14 @@ const Icons = styled(Box)(({ theme }) => ({
   display: "none",
   gap: 20,
   alignItems: "center",
-  [theme.breakpoints.up("sm")]:{display: "flex"}
+  [theme.breakpoints.up("sm")]: { display: "flex" },
 }));
 
 const UserBox = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: 10,
   alignItems: "center",
-  [theme.breakpoints.up("sm")]:{display: "none"}
+  [theme.breakpoints.up("sm")]: { display: "none" },
 }));
 
 const Navbar = () => {
@@ -71,9 +74,7 @@ const Navbar = () => {
             src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           />
         </Icons>
-        <UserBox
-
-        >
+        <UserBox>
           <Avatar
             sx={{ height: 30, width: 30 }}
             src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -81,6 +82,25 @@ const Navbar = () => {
           <Typography variant="span">Sean</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
