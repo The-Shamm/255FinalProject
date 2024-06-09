@@ -1,3 +1,4 @@
+import React, { useState } from "react"; 
 import {
   AppBar,
   Avatar,
@@ -6,12 +7,10 @@ import {
   InputBase,
   Menu,
   MenuItem,
-  MenuList,
   Toolbar,
   Typography,
   styled,
-} from '@mui/material';
-import React from "react";
+} from "@mui/material";
 
 import MailIcon from "@mui/icons-material/Mail";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -25,7 +24,7 @@ const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
-  width: "40%", // Ensure width value is a string
+  width: "40%",
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -43,6 +42,7 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false); 
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -72,9 +72,10 @@ const Navbar = () => {
           <Avatar
             sx={{ height: 30, width: 30 }}
             src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            onClick={(e) => setOpen(true)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ height: 30, width: 30 }}
             src="https://images.pexels.com/photos/5380621/pexels-photo-5380621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -85,21 +86,20 @@ const Navbar = () => {
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
         open={open}
-        onClose={handleClose}
+        onClose={(e) => setOpen(false)}
         anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "right",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
       </Menu>
     </AppBar>
   );
