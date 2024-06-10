@@ -13,7 +13,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 import Add from "@mui/icons-material/Add";
 import ModeNight from "@mui/icons-material/ModeNight";
 
-const Sidebar = () => {
+const Sidebar = ({mode, setMode}) => {
   return (
     <Box
       bgcolor="primary.main"
@@ -21,6 +21,7 @@ const Sidebar = () => {
       p={2}
       sx={{ display: { xs: "none", sm: "block" } }}
     >
+      <Box position="fixed">
       <List>
         <ListItem disablePadding>
           <ListItemButton component="a" href="#home"> 
@@ -67,10 +68,11 @@ const Sidebar = () => {
             <ListItemIcon>
               <ModeNight /> 
             </ListItemIcon>
-            <Switch defaultChecked color="secondary" />
+            <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")} defaultChecked color="secondary" />
           </ListItemButton>
         </ListItem>
       </List>
+      </Box>
     </Box>
   );
 };
