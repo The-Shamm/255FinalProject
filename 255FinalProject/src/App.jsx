@@ -42,7 +42,7 @@ function App() {
               />
               {/* Add other routes as needed */}
             </Routes>
-            <Rightbar />
+            
           </Stack>
           <Add />
           <Container>

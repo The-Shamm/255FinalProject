@@ -34,9 +34,9 @@ const InputForm = ({ onSubmit }) => {
       onSubmit={handleSubmit}
       className="mainform"
       style={{
-        maxWidth: "80%",
+        maxWidth: "90%",
         display: "block", // Change to "flex" once style issue is debugged
-        margin: "0 auto", // delete after debugging
+        
       }}
     >
       <TextField
