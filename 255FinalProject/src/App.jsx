@@ -40,6 +40,7 @@ function App() {
                 path="/service-teams" 
                 element={<InputForm onSubmit={handleSubmit} />} 
               />
+              <Route path="/Team-Repo" element={<ServiceTeamTable data={formData} />} />
               {/* Add other routes as needed */}
             </Routes>
             
@@ -99,7 +100,6 @@ function App() {
                   </li>
                 </ul>
               </nav>
-              <ServiceTeamTable data={formData} />
             </div>
           </Container>
         </Box>

@@ -29,11 +29,11 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/addition"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/Team-Repo"> {/* Changed to Link for navigation */}
               <ListItemIcon>
                 <Add />
               </ListItemIcon>
-              <ListItemText primary="Addition" />
+              <ListItemText primary="Team Repository" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>

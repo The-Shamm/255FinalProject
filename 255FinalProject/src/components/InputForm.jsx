@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import PropTypes from "prop-types";
+import { Typography } from "@mui/material";
 
 const InputForm = ({ onSubmit }) => {
   const [formInput, setFormInput] = useState({
@@ -35,28 +36,34 @@ const InputForm = ({ onSubmit }) => {
       className="mainform"
       style={{
         maxWidth: "90%",
-        display: "block", // Change to "flex" once style issue is debugged
+        display: "block", 
         
       }}
     >
-      <TextField
+
+      <Typography variant="h3" sx={{ textAlign: "center", pb: 2 }}>Service team input form.</Typography>
+      <Typography variant="h5" sx={{ textAlign: "center", pb: 2 }}>please fill in the information below to the best of your knowledge. </Typography>
+      <TextField sx={{ width: "80%", pl: 1 }}
         name="serviceteamName"
         label="Service Team Name"
         value={formInput.serviceteamName}
         onChange={handleChange}
-        fullWidth
-        margin="normal"
+        
+        
         className="TextField1"
+        
+        textAlign= "center"
       />
-      <TextField
+      <TextField sx={{ width: "80%", pl: 1 }} 
         name="serviceteamProject"
         label="Service Team Project"
         value={formInput.serviceteamProject}
         onChange={handleChange}
         fullWidth
         margin="normal"
+        
       />
-      <TextField
+      <TextField sx={{ width: "80%", pl: 1 }}
         name="serviceteamDescription"
         label="Service Team Description"
         value={formInput.serviceteamDescription}
@@ -64,7 +71,7 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <TextField
+      <TextField sx={{ width: "80%", pl: 1 }}
         name="serviceTeamAlarms"
         label="Service Team Alarms"
         value={formInput.serviceTeamAlarms}
@@ -72,7 +79,7 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <TextField
+      <TextField sx={{ width: "80%", pl: 1 }}
         name="serviceteamDependencies"
         label="Service Team Dependencies"
         value={formInput.serviceteamDependencies}
@@ -80,7 +87,7 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <Button type="submit" variant="contained" color="primary">
+      <Button type="submit" variant="contained" color="primary" sx={{ m: 5 }} >
         Submit
       </Button>
     </form>
