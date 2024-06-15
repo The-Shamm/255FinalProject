@@ -36,34 +36,60 @@ const InputForm = ({ onSubmit }) => {
       className="mainform"
       style={{
         maxWidth: "90%",
-        display: "block", 
-        
+        display: "block",
       }}
     >
-
-      <Typography variant="h3" sx={{ textAlign: "center", pb: 2 }}>Service team input form.</Typography>
-      <Typography variant="h5" sx={{ textAlign: "center", pb: 2 }}>please fill in the information below to the best of your knowledge. </Typography>
-      <TextField sx={{ width: "80%", pl: 1 }}
+      <Typography
+        variant="h3"
+        sx={{
+          textAlign: "center",
+          pb: 2,
+          display: { xs: "none", sm: "block" },
+          color: "theme.secondary"
+        }}
+      >
+        Service team input form.
+      </Typography>
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: "center",
+          pb: 2,
+          display: { xs: "none", sm: "block" },
+        }}
+      >
+        please fill in the information below to the best of your knowledge.
+      </Typography>
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: "center",
+          pb: 2,
+          display: { xs: "block", sm: "none" },
+        }}
+      >
+        Input Form
+      </Typography>
+      <TextField
+        sx={{ width: "80%", pl: 1 }}
         name="serviceteamName"
         label="Service Team Name"
         value={formInput.serviceteamName}
         onChange={handleChange}
-        
-        
         className="TextField1"
-        
-        textAlign= "center"
+        textAlign="center"
       />
-      <TextField sx={{ width: "80%", pl: 1 }} 
+      <TextField
+        sx={{ width: "80%", pl: 1 }}
         name="serviceteamProject"
         label="Service Team Project"
         value={formInput.serviceteamProject}
         onChange={handleChange}
         fullWidth
         margin="normal"
-        
       />
-      <TextField sx={{ width: "80%", pl: 1 }}
+      <TextField
+        sx={{ width: "80%", pl: 1 }}
         name="serviceteamDescription"
         label="Service Team Description"
         value={formInput.serviceteamDescription}
@@ -71,7 +97,8 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <TextField sx={{ width: "80%", pl: 1 }}
+      <TextField
+        sx={{ width: "80%", pl: 1 }}
         name="serviceTeamAlarms"
         label="Service Team Alarms"
         value={formInput.serviceTeamAlarms}
@@ -79,7 +106,8 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <TextField sx={{ width: "80%", pl: 1 }}
+      <TextField
+        sx={{ width: "80%", pl: 1 }}
         name="serviceteamDependencies"
         label="Service Team Dependencies"
         value={formInput.serviceteamDependencies}
@@ -87,7 +115,7 @@ const InputForm = ({ onSubmit }) => {
         fullWidth
         margin="normal"
       />
-      <Button type="submit" variant="contained" color="primary" sx={{ m: 5 }} >
+      <Button type="submit" variant="contained" color="primary" sx={{ m: 5 }}>
         Submit
       </Button>
     </form>

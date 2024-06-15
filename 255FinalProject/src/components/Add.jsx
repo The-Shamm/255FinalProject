@@ -56,7 +56,7 @@ import {
             <Typography
               variant="h6"
               id="modal-title"
-              color="orange"
+              color="secondary.main"
               textAlign="center"
             >
               Post update

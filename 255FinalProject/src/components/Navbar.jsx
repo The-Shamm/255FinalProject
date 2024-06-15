@@ -56,7 +56,7 @@ const Navbar = () => {
           color="secondary.main"
           sx={{ display: { xs: "none", sm: "block" } }}
         >
-          Navigation
+          HAPPENINGS.COM
         </Typography>
         <Menu
           sx={{

@@ -40,8 +40,8 @@ const Feed = () => {
   };
 
   return (
-    <Box bgcolor="primary.main" flex={4} p={2}>
-      <Typography variant="h3" sx={{ textAlign: "center", my: 2 }}>
+    <Box bgcolor="primary.main" flex={4} p={2} >
+      <Typography variant="h3" color="secondary.main" sx={{ textAlign: "center", my: 2, display: { xs: "none", sm: "block" } }} >
         Major Updates Feed
       </Typography>
 
