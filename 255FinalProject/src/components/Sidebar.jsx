@@ -21,7 +21,7 @@ const Sidebar = ({ mode, setMode }) => {
       <Box position="sticky">
         <List>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/"> 
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -29,7 +29,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/Team-Repo"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/Team-Repo"> 
               <ListItemIcon>
                 <Person />
               </ListItemIcon>
@@ -37,7 +37,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/service-teams"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/service-teams"> 
               <ListItemIcon>
               <Add />
               </ListItemIcon>
@@ -45,7 +45,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/settings"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/settings">
               <ListItemIcon>
                 <Settings />
               </ListItemIcon>
@@ -53,7 +53,7 @@ const Sidebar = ({ mode, setMode }) => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/profile"> {/* Changed to Link for navigation */}
+            <ListItemButton component={Link} to="/profile"> 
               <ListItemIcon>
                 <AccountBoxIcon />
               </ListItemIcon>
